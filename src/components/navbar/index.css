@@ -1,0 +1,21 @@
+.navbar {
+    height: 80px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 50px;
+    z-index: 1;
+}
+
+.nav {
+    text-decoration: none;
+    color: rgb(244, 244, 244);
+    font-size: 1.3rem;
+    right: 0;
+    padding: 25px;
+}
+
+.nav:hover {
+    color: var(--orange);
+}

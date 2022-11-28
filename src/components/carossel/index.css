@@ -1,0 +1,7 @@
+#carossel-comic {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: calc(100% - 65px);
+    padding-left: 65px;
+}

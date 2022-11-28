@@ -1,0 +1,30 @@
+#carossel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title-formats {
+  padding-left: 75px;
+  font-size: 40px;
+  margin: 0;
+}
+
+#rectangle {
+  background: #F3EAD3;
+  width: 70px;
+}
+
+#rectangle-list {
+  z-index: -1;
+  height : 100%;
+  top: 0;
+  right: 15px;
+  display: flex;
+  gap: 15px;
+  position: fixed;
+}
+
+#comic-list-container {
+  height: 230px;
+}

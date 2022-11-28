@@ -1,0 +1,64 @@
+.loading {
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 8px;
+  text-shadow: -8px 8px var(--yellowShadow);
+}
+
+#character-title {
+  position: relative;
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 0px;
+  color: rgb(45, 41, 41);;
+}
+
+#character {
+  margin: 10px;
+  border: solid;
+}
+
+.brochure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title-popup {
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-shadow: -5px 5px var(--yellowShadow);
+}
+
+.description-popup {
+  font-size: 20px;
+  color: var(--yellowShadow);
+}
+
+.title-section-grid {
+  text-align: left;
+  font-size: 25px;
+  margin-top: 40px;
+  margin-left: 8px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  overflow: auto;
+}
+
+#characters-list-container {
+  height: 380px;
+}
+
+.body-grid {
+  display: flex;
+  background: #f5e7cc;
+  margin: 8px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}

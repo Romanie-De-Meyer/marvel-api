@@ -1,0 +1,9 @@
+body {
+    background-color: #F9EFDC;
+}
+
+:root {
+    --orange: #F66A31;
+    --yellowCard: #FAC959;
+    --yellowShadow: #FFB727;
+}

@@ -1,0 +1,30 @@
+.gridCreators {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 5px;
+}
+
+#creators {
+    margin: 5px;
+    border: solid;
+    border-style: groove;
+    border-color: #00000054;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 2px #00000054;
+    z-index: 0;
+    transition: 0.3s;
+    font-size: 25px;
+}
+
+#creators:hover {
+    background-color: #DDD6BC;
+    transform: scale(1.05);
+    z-index: 1;
+    cursor: pointer;
+}
+
+#creator-list-container {
+    height: 400px;
+}
