@@ -25,7 +25,6 @@ const Comics = () => {
   const [comicsFormats, setComicsFormats] = useState<string[]>([]);
   const [open, setOpen] = useState(false);
   const [popupData, setPopupData] = useState<ComicResult | null>(null);
-  
 
   useEffect(() => {
     (async () => {
@@ -52,9 +51,9 @@ const Comics = () => {
       </div>
       <div id="carossel-container">
         {comicsFormats.map((v, i) => {
-            info?.data.results.filter((value) => {
-              return !value.format.localeCompare(v);
-            })
+          info?.data.results.filter((value) => {
+            return !value.format.localeCompare(v);
+          });
           return (
             <div key={v + i}>
               <p className="title-formats">{v === "" ? "#" : v} </p>
@@ -80,16 +79,22 @@ const Comics = () => {
             <div>
               <h1 className="title-popup">{popupData?.title}</h1>
               <p className="description-popup">{popupData?.description}</p>
-              <p className="title-section-grid">Characters featuring this comic</p>
+              <p className="title-section-grid">
+                Characters featuring this comic
+              </p>
               <div className="container-grid" id="comic-list-container">
-                {popupData?.characters.items.length ? popupData?.characters.items.map((v, i) => {
-                  console.log("name: ", v.name)
-                  return (
-                    <div className="body-grid" key={v.name + i}>
-                      <p>{v.name}</p>
-                    </div>
-                  );
-                }) : <p>No information</p>}
+                {popupData?.characters.items.length ? (
+                  popupData?.characters.items.map((v, i) => {
+                    console.log("name: ", v.name);
+                    return (
+                      <div className="body-grid" key={v.name + i}>
+                        <p>{v.name}</p>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <p>No information</p>
+                )}
               </div>
             </div>
           </Popup>

@@ -31,5 +31,11 @@ export type CharactersComicProps = {
   available: number;
   returned: number;
   collectionURI: string;
-  items: [{ resourceURI: string; name: string; role: string }];
+  items: ItemsComicProps[];
+};
+
+export type ItemsComicProps = {
+  resourceURI: string;
+  name: string;
+  role: string;
 };

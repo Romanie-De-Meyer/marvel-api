@@ -1,20 +1,34 @@
+export interface CreatorsProps {
+  data: CreatorData;
+}
+
+export type CreatorData = {
+  results: CreatorResult[];
+};
+
 export type CreatorResult = {
   id: number;
   firstName: string;
   middleName: string;
   lastName: string;
   fullName: string;
-  thumbnail: { path: string; extension: string };
-  comics: {
-    available: number;
-    returned: number;
-    collectionURl: string;
-    items: [{ resourceURl: string; name: string }];
-  };
-}
+  thumbnail: ThumbnailCreatorProps;
+  comics: ComicsCreatorProps;
+};
 
-export interface CreatorsProps {
-  data: {
-    results: CreatorResult[];
-  };
-}
+export type ThumbnailCreatorProps = {
+  path: string;
+  extension: string;
+};
+
+export type ComicsCreatorProps = {
+  available: number;
+  returned: number;
+  collectionURI: string;
+  items: ItemsCreatorProps[];
+};
+
+export type ItemsCreatorProps = {
+  resourceURI: string;
+  name: string;
+};

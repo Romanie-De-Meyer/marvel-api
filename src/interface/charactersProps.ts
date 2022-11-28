@@ -1,3 +1,7 @@
+export interface CharactersProps {
+  data: CharacterData;
+}
+
 export type CharacterData = {
   results: CharacterResult[];
 };
@@ -21,9 +25,10 @@ export type ComicsCharacterProps = {
   available: number;
   returned: number;
   collectionURI: string;
-  items: [{ resourceURI: string; name: string }];
+  items: ItemsCharacterProps[];
 };
 
-export interface CharactersProps {
-  data: CharacterData;
-}
+export type ItemsCharacterProps = {
+  resourceURI: string;
+  name: string;
+};

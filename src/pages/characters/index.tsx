@@ -1,7 +1,10 @@
 import "./index.css";
 import MD5 from "crypto-js/md5";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { CharacterResult, CharactersProps } from "../../interface/charactersProps";
+import {
+  CharacterResult,
+  CharactersProps,
+} from "../../interface/charactersProps";
 import Card from "../../components/card";
 import Popup from "../../components/popup";
 
@@ -88,15 +91,21 @@ const Characters = () => {
             <div>
               <h1 className="title-popup">{popupData?.name}</h1>
               <p className="description-popup">{popupData?.description}</p>
-              <p className="title-section-grid">Comics featuring this character</p>
+              <p className="title-section-grid">
+                Comics featuring this character
+              </p>
               <div className="container-grid" id="characters-list-container">
-                {popupData?.comics.items.length ? popupData?.comics.items.map((v, i) => {
-                  return (
-                    <div className="body-grid" key={v.name + i} >
-                      <p>{v.name}</p>
-                    </div>
-                  );
-                }) : <p>No information</p>}
+                {popupData?.comics.items.length ? (
+                  popupData?.comics.items.map((v, i) => {
+                    return (
+                      <div className="body-grid" key={v.name + i}>
+                        <p>{v.name}</p>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <p>No information</p>
+                )}
               </div>
             </div>
           </Popup>

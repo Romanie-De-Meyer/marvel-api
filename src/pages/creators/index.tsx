@@ -84,15 +84,21 @@ const Creators = () => {
           <Popup closePopup={() => setOpen(false)}>
             <div>
               <h1 className="title-popup">{popupData?.fullName}</h1>
-              <p className="title-section-grid">Comics created by this creator</p>
+              <p className="title-section-grid">
+                Comics created by this creator
+              </p>
               <div className="container-grid" id="creator-list-container">
-                {popupData?.comics.items.length ? popupData?.comics.items.map((v, i) => {
-                  return (
-                    <div className="body-grid" key={v.name + i}>
-                      <p>{v.name}</p>
-                    </div>
-                  );
-                }): <p>No information</p>}
+                {popupData?.comics.items.length ? (
+                  popupData?.comics.items.map((v, i) => {
+                    return (
+                      <div className="body-grid" key={v.name + i}>
+                        <p>{v.name}</p>
+                      </div>
+                    );
+                  })
+                ) : (
+                  <p>No information</p>
+                )}
               </div>
             </div>
           </Popup>

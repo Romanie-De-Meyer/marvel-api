@@ -1,6 +1,12 @@
 import "./index.css";
 
 const Home = () => {
+  const charactersImg: string[] = [
+    "chara1.png",
+    "chara2.png",
+    "hulk.png",
+    "spider.png",
+  ];
   return (
     <>
       <div id="first-block">
@@ -23,7 +29,12 @@ const Home = () => {
           <p id="text">bring your childhood back</p>
         </div>
       </div>
-      <div>
+      <div id="seconde-block">
+        <div id="cercle-list">
+          {charactersImg.map((v, i) => {
+            return <img src={`/${v}`} alt={v} id="cercle" key={i}></img>;
+          })}
+        </div>
         <span className="title-page" id="book">
           book
         </span>
